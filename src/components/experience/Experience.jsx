@@ -1,185 +1,59 @@
-import React from "react";
-import "./experience.css";
-import { BiBadgeCheck } from "react-icons/bi";
+import React from 'react';
+import styled, { css } from 'styled-components';
+import Timeline from '@mui/lab/Timeline';
+import TimelineItem from '@mui/lab/TimelineItem';
+import TimelineSeparator from '@mui/lab/TimelineSeparator';
+import TimelineConnector from '@mui/lab/TimelineConnector';
+import TimelineContent from '@mui/lab/TimelineContent';
+import TimelineDot from '@mui/lab/TimelineDot';
+import ExperienceCard from './ExperienceCard';
+import { experiences } from '../data/constants';
+
+const TimelineSection = styled.div`
+  width: 100%;
+  padding: 0 20rem 0 20rem;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width:600px) {
+    padding:0;
+    translate: -20px;
+  }
+`;
+
+const getMobileStyles = (index) => css`
+  width:100%;
+  flex-direction: ${index % 2 === 0 ? 'row-reverse' : 'row'};
+  @media screen and (max-width: 600px) {
+    flex-direction: row;
+  }
+`;
+
+const StyledTimelineItem = styled(TimelineItem)`
+  ${({ index }) => getMobileStyles(index)}
+`;
+
+
 const Experience = () => {
   return (
-    <section id="experience">
-      <h5>What Skill I have</h5>
-      <h2>My Skills</h2>
-      <div className="experience_container container">
-        <div className="experience_frontend">
-          <h3>Frontend Development</h3>
-          <div className="experience_content">
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>HTML</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>CSS</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Java Script</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>React</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Bootstrap</h4>
-                <small className="text-light">Beginner</small>
-              </div>
-            </article>
-          </div>
-        </div>
-        <div className="experience_backend">
-          <h3>Backend Development</h3>
-          <div className="experience_content">
-
-          <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Django</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Spring Boot</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Flask</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>MySQL</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>PostgreSQL</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Mongo DB</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-            
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Node Js</h4>
-                <small className="text-light">Novice</small>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <div className="experience_languages">
-          <h3>Programming Languages</h3>
-          <div className="experience_content">
-
-          <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Java</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Python</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>C</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article>
-
-          </div>
-        </div>
-
-        <div className="experience_others">
-          <h3>Others</h3>
-          <div className="experience_content">
-
-          <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>GIT</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Selenium</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Postman</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article>
-
-            <article className="experience_details">
-              <BiBadgeCheck className="experience_details-icons" />
-              <div>
-                <h4>Figma</h4>
-                <small className="text-light">Novice</small>
-              </div>
-            </article>
-          </div>
-        </div>
-
-      </div>
+    <section>
+      <h5>My work experience as a software engineer and working on different companies and projects.</h5>
+      <h2>Experience</h2>
+      <TimelineSection style={{ alignContent:'center',margin:0 }}>
+        <Timeline style={{ width: '100%'}}>
+          {experiences.map((experience, index) => (
+            <StyledTimelineItem key={index} index={index}>
+              <TimelineSeparator>
+                <TimelineDot variant="" style={{ color: '#4db5ff', marginTop: 30 }} />
+                {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#4bd5ff' }} />}
+              </TimelineSeparator>
+              <TimelineContent sx={{ py: 3, px: 2 }}>
+                <ExperienceCard experience={experience} />
+              </TimelineContent>
+            </StyledTimelineItem>
+          ))}
+        </Timeline>
+      </TimelineSection>
     </section>
   );
 };
