@@ -36,9 +36,9 @@ const StyledTimelineItem = styled(TimelineItem)`
 
 const Experience = () => {
   return (
-    <section>
-      <h5>My work experience as a software engineer and working on different companies and projects.</h5>
-      <h2>Experience</h2>
+    <section id="experience">
+      <h5>A journey of professional growth</h5>
+      <h2>Career Odyssey</h2>
       <TimelineSection style={{ alignContent:'center',margin:0 }}>
         <Timeline style={{ width: '100%'}}>
           {experiences.map((experience, index) => (
@@ -48,7 +48,7 @@ const Experience = () => {
                 {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#4bd5ff' }} />}
               </TimelineSeparator>
               <TimelineContent sx={{ py: 3, px: 2 }}>
-                <ExperienceCard experience={experience} />
+                <ExperienceCard experience={experience} val={index} />
               </TimelineContent>
             </StyledTimelineItem>
           ))}

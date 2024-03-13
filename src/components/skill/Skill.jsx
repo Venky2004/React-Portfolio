@@ -14,7 +14,7 @@ const Skill = () => {
               <BiBadgeCheck className="skill_details-icons" />
               <div>
                 <h4>HTML</h4>
-                <small className="text-light">skilld</small>
+                <small className="text-light">experienced</small>
               </div>
             </article>
             <article className="skill_details">
@@ -55,7 +55,7 @@ const Skill = () => {
               <BiBadgeCheck className="skill_details-icons" />
               <div>
                 <h4>Django</h4>
-                <small className="text-light">skilld</small>
+                <small className="text-light">experienced</small>
               </div>
             </article>
 
@@ -63,7 +63,7 @@ const Skill = () => {
               <BiBadgeCheck className="skill_details-icons" />
               <div>
                 <h4>Spring Boot</h4>
-                <small className="text-light">skilld</small>
+                <small className="text-light">experienced</small>
               </div>
             </article>
 
@@ -118,7 +118,7 @@ const Skill = () => {
               <BiBadgeCheck className="skill_details-icons" />
               <div>
                 <h4>Java</h4>
-                <small className="text-light">skilld</small>
+                <small className="text-light">experienced</small>
               </div>
             </article>
 
@@ -149,7 +149,7 @@ const Skill = () => {
               <BiBadgeCheck className="skill_details-icons" />
               <div>
                 <h4>GIT</h4>
-                <small className="text-light">skilld</small>
+                <small className="text-light">experienced</small>
               </div>
             </article>
 
@@ -157,7 +157,7 @@ const Skill = () => {
               <BiBadgeCheck className="skill_details-icons" />
               <div>
                 <h4>Selenium</h4>
-                <small className="text-light">skilld</small>
+                <small className="text-light">experienced</small>
               </div>
             </article>
 
@@ -165,7 +165,7 @@ const Skill = () => {
               <BiBadgeCheck className="skill_details-icons" />
               <div>
                 <h4>Postman</h4>
-                <small className="text-light">skilld</small>
+                <small className="text-light">experienced</small>
               </div>
             </article>
 

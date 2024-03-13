@@ -1,26 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Button } from 'react-scroll'
-const Document = styled.img`
+const Document = styled.h4`
     display: none;
-    height: 70px;
     width: fit-content;
-    background-color: #000;
-    border-radius: 10px;
+    color: var(--color-light);
+    transition: var(--transition);
     &:hover{
         cursor: pointer;
         opacity: 0.8;
+        color:var(--color-primary)
     }
 `
 
 const Description = styled.div`
     width: 100%;
-    font-size: 15px;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 300;
     color: ${({ theme }) => theme.text_primary + 99};
     margin-bottom: 10px;
     @media only screen and (max-width: 768px){
-        font-size: 12px;
+        font-size: 0.7rem;
+        fonweight: 200;
+        margin-top: 0.4rem;
     }
 `
 
@@ -35,7 +37,7 @@ text-overflow: ellipsis;
 
 const Card = styled.div`
     width: 100%;
-    padding: 20px 16px;
+    padding: 20px 20px;
     justify-content: space-between;
     position: relative;
     overflow: hidden;
@@ -44,7 +46,7 @@ const Card = styled.div`
     gap: 12px;
 
     background: var(--color-bg-variant);
-    border-radius: 2rem;
+    border-radius: 1rem;
     border: 1px solid transparent;
     transition: var(--transition);
 
@@ -63,6 +65,7 @@ const Card = styled.div`
 
     &:hover ${Document}{
         display: flex;
+        border-radius: 0.5rem;
     }
 
     &:hover ${Span}{
@@ -70,8 +73,6 @@ const Card = styled.div`
         -webkit-line-clamp: unset;
 
     }
-
-    border: 0.1px solid #306EE8;
     box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
 
@@ -82,28 +83,33 @@ const Top = styled.div`
 `
 
 const Image = styled.img`
-    height: 50px;
-    width:50px;
+    height: 60px;
+    width:60px;
     aspect-ratio:1/1;
-    background-color: #000;
-    border-radius: 10px;
+    background-color: transparent;
+    border-radius: 100rem;
+    border: 1px solid transparent;
     margin-top: 4px;
     @media only screen and (max-width: 768px){
         height: 40px;
+        width:40px;
     }
+
 `
 
 const Body = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    padding: 0 0.5rem; 
 `
 
 
 const Role = styled.div`
-    font-size: 18px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text_primary + 99};
+    font-weight: 500;
+    font-size:20px;
+    color: Var(--color-primary);
+    
     @media only screen and (max-width: 768px){
         font-size: 14px;
     }
@@ -112,7 +118,7 @@ const Role = styled.div`
 const Company = styled.div`
     font-size: 14px;
     font-weight: 500;
-    color: ${({ theme }) => theme.text_secondary + 99};
+    color: var(--color-white);
     @media only screen and (max-width: 768px){
         font-size: 12px;
     }
@@ -121,7 +127,7 @@ const Company = styled.div`
 const Date = styled.div`
     font-size: 12px;
     font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
+    color: var(--color-light);
     @media only screen and (max-width: 768px){
         font-size: 10px;
     }
@@ -133,6 +139,9 @@ const Skills = styled.div`
     display: flex;
     gap: 12px;
     margin-top: -10px;
+    @media only screen and (max-width: 768px){
+        margin-top: 0.4rem;
+    }
 `
 
 const ItemWrapper = styled.div`
@@ -146,13 +155,14 @@ const Skill = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.text_primary + 99};
     @media only screen and (max-width: 768px){
-        font-size: 12px;
+        font-size: 0.7rem;
+        fonweight: 200;
     }
 `
 
 
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience,val }) => {
     return (
         <Card>
             <Top>
@@ -172,10 +182,15 @@ const ExperienceCard = ({ experience }) => {
                     <>
                         <br />
                         <Skills>
-                            <b>Skills:</b>
                             <ItemWrapper>
                                 {experience?.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
+                                   <>
+                                   {val % 2 === 0 ? (
+                                     <Skill>⚡{skill}</Skill>
+                                   ) : (
+                                     <Skill>🔥{skill}</Skill>
+                                   )}
+                                 </>
                                 ))}
                             </ItemWrapper>
                         </Skills>
@@ -184,7 +199,8 @@ const ExperienceCard = ({ experience }) => {
             </Description>
             {experience.doc &&
                 <a href={experience.doc} target="new">
-                    <Document src={experience.doc} />
+                    <Document>
+                        View Certificate</Document>
                 </a>
             }
 
