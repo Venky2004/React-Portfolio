@@ -1,10 +1,7 @@
 import React from 'react';
-import Img1 from '../assests/aas.jpg';
-import Img2 from '../assests/bfs.jpeg';
-import Img3 from '../assests/ems.jpg';
-import Img4 from '../assests/hms.jpg';
-import Img5 from '../assests/jarvis.jpg';
-import Img6 from '../assests/goku.jpg';
+import Img1 from '../assests/project/aas.jpg';
+import Img2 from '../assests/project/bfs.jpeg';
+import Img3 from '../assests/project/hms.jpg';
 
 const Portfolio = () => {
 

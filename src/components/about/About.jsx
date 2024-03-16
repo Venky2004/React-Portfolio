@@ -3,8 +3,7 @@ import './about.css'
 import {FaAward} from 'react-icons/fa'
 import {FaUserSecret} from 'react-icons/fa'
 import {AiFillFolderOpen} from 'react-icons/ai'
-import pic from '../assests/goku.jpg'
-import mypic from '../assests/aigen1.jpg'
+import mypic from '../assests/person/aigen1.jpg'
 const about = () => {
   return (
     <section id="about">

@@ -1,21 +1,37 @@
-import whitehat from "../assests/whh_transparent.png";
-import kl from "../assests/kl.png";
-import segura from "../assests/segura.png";
-import tjk from "../assests/tjk.png";
-import aks from "../assests/aks.png";
-import nptel from "../assests/nptel.png";
-import jpmc from "../assests/jpmc.png";
-import aws from "../assests/aws.png";
-import pcap from "../assests/pcap.png";
-import oracle from "../assests/oracle.png";
-import redhat from "../assests/redhat.png";
-import goku from "../assests/goku.jpg";
-import mypic from "../assests/mypic.png";
-import jayasai from "../assests/jayasai.jpg";
-import sohan from "../assests/sohan.jpg";
-import balakrishna from "../assests/balakrishna.jpg";
-import logalyzer from "../assests/logalyzer.png";
-import hms from "../assests/hms.png";
+import whitehat from "../assests/career/whh.png";
+import kl from "../assests/career/kl.png";
+import segura from "../assests/career/segura.png";
+import tjk from "../assests/career/tjk.png";
+import aks from "../assests/career/aks.png";
+import nptel from "../assests/career/nptel.png";
+import jpmc from "../assests/career/jpmc.png";
+import eduskills from '../assests/career/eduskills.jpeg';
+import paloalto from "../assests/career/paloalto.png";
+import codeclause from "../assests/career/codeclause.png";
+import aws from "../assests/career/aws.png";
+import pcap from "../assests/career/pcap.png";
+import oracle from "../assests/career/oracle.png";
+import redhat from "../assests/career/redhat.png";
+import sih from '../assests/career/sih.jpg';
+
+
+import logalyzer from "../assests/project/logalyzer.png";
+import goku from "../assests/project/goku.jpg";
+import hms from "../assests/project/hms.png";
+
+import mypic from "../assests/person/mypic.png";
+import jayasai from "../assests/person/jayasai.jpg";
+import sohan from "../assests/person/sohan.jpg";
+import balakrishna from "../assests/person/balakrishna.jpg";
+import sarvan from "../assests/person/sarvan.jpg";
+
+import jpmc_cfg_23 from "../assests/document/jpmc_cfg_23.pdf";
+import code_clause from "../assests/document/code_clause.pdf";
+import oracle_ml from "../assests/document/oracle_ml.pdf";
+import programming_in_java from "../assests/document/Programming_in_java.pdf";
+import paloalto_cys from "../assests/document/palo_alto_cys.pdf";
+import juniper_cert from "../assests/document/juniper_cert.pdf";
+
 export const experiences = [
   {
     id: 5,
@@ -38,39 +54,63 @@ export const experiences = [
     //doc: "",
   },
   {
-    id: 7,
-    img: "",
-    role: "Data Analytics Virtual Intern",
-    company: "EduSkills Foundation",
-    date: "May 2023 - July 2023",
-    desc: "Learn the fundamentals of Data Analytics using AWS Academy",
-    skills: ["Data Analytics", "Cloud Computing", "AWS", "MongoDB"],
-    //doc:"",
+    id: 9,
+    img: sih,
+    role: "Smart India Hackathon Finalist",
+    company: "Smart India Hackathon by AICTE",
+    date: "December 2023",
+    desc: "Worked on a real time project that is useful for 8th Class Students",
+    skills: ["ReactJS", "Python", "Django", "PHP", "XAMP", "Postman", "sqlite3"],
+    doc: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/social.png",
+  },
+  {
+    id: 9,
+    img: jpmc,
+    role: "Code for Good 2023 Winner",
+    company: "JPMorgan Chase & Co.",
+    date: "July 2023",
+    desc: "I am a Code for Good 2023 Winner, recognized by JPMorgan Chase & Co. for my contributions to the community. I was part of a team that developed a web application for a non-profit organization, which was selected as the winning project.",
+    skills: ["React", "sqlite3", "Django"],
+    doc: jpmc_cfg_23,
   },
   {
     id: 8,
-    img: "https://media.licdn.com/dms/image/C560BAQH827651PNzYw/company-logo_100_100/0/1630649828607/eduskillsfoundation_logo?e=1709769600&v=beta&t=zG8cRl_59-7dlZerKJ7RcA6GtLWbWGb2nVp-VkjZZoM",
-    role: "AI&ML Virtual Intern",
+    img: paloalto,
+    role: "Palo alto CyberSecurity Virtual Intern",
     company: "EduSkills Foundation",
     date: "December 2022 - March 2023",
     desc: "Learn the fundamentals of Cloud and AI & ML using AWS Academy",
     skills: [
-      "Cloud Computing",
-      "Machine Learning",
-      "Artificial Intelligence",
-      "Amazon Web Services",
+      "CyberSecurity",
+      "Network Security",
+      "Cloud Security",
+      "SOC",
     ],
-    doc: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/ml.jpg",
+    doc: paloalto_cys,
   },
-
   {
-    id: 9,
-    img: "https://media.licdn.com/dms/image/C560BAQG87c6Y46rfxw/company-logo_100_100/0/1630670125923?e=1709769600&v=beta&t=NyRbUr6t6qX0HJny6hWz5oVWvakjxVEMDMPhrIgUVcI",
-    role: "Student Point of View(SPoC) and Volunteer",
-    company: "SwechaAP",
-    date: "June 2022 - August 2022",
-    desc: "Worked on a real time project that is useful for 8th Class Students",
-    doc: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/social.png",
+    id: 8,
+    img: codeclause,
+    role: "Python Development Intern",
+    company: "Code Clause",
+    date: "June 2023 - July 2023",
+    desc: "Worked on a real-time project that is useful mini projects using Python",
+    skills: [
+      "Python",
+      "Pygame",
+      "tkinter",
+    ],
+    doc: code_clause,
+  },
+  {
+    id: 7,
+    img: eduskills,
+    role: "Juniper Networks Networking Virtual Intern",
+    company: "EduSkills Foundation",
+    date: "May 2023 - July 2023",
+    desc: "Learn the fundamentals of Data Analytics using AWS Academy",
+    skills: ["Networking", "Networks", "Routing", "Switching"],
+    doc: juniper_cert,
   },
   {
     id: 10,
@@ -79,7 +119,8 @@ export const experiences = [
     company: "Amazon Web Services(AWS)",
     date: " Nov 2023 - Nov 2026",
     desc: "I am an AWS Certified Developer Associate with expertise in designing and implementing scalable and efficient cloud solutions",
-    doc: "https://media.licdn.com/dms/image/D5622AQHqdMRx94HjrQ/feedshare-shrink_800/0/1700750750997?e=1704931200&v=beta&t=ohK_O-ipoULmDf3l5ZJFnk5Vuv_Er6Bkaw9VbI65orM",
+    skills: ["AWS","Cloud Computing"],
+    doc: "https://www.credly.com/badges/f50cc086-c5ef-41dd-9547-f075a26256ab/linked_in_profile",
   },
   {
     id: 11,
@@ -88,7 +129,8 @@ export const experiences = [
     company: "Oracle",
     date: " Aug 2023 - Aug 2025",
     desc: "I am certified in Oracle Machine Learning using Autonomous Database 2023, demonstrating proficiency in leveraging machine learning within Oracle's Autonomous Database, valid until August 2025.",
-    doc: "https://brm-workforce.oracle.com/pdf/certview/images/OMLADB2023CA.png",
+    skills: ["Oracle", "Machine Learning", "SQL", "Python"],
+    doc: oracle_ml,
   },
   {
     id: 12,
@@ -97,7 +139,7 @@ export const experiences = [
     company: "Red Hat",
     date: " Aug 2023 - Aug 2026",
     desc: "I am a Red Hat Certified Enterprise Application Developer, proficient in application development, certified in August 2023.",
-    doc: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/redhat.png",
+    doc: "https://www.credly.com/badges/c128c952-ee4d-4c23-a6cd-dbf72b542eef/linked_in_profile",
   },
   {
     id: 13,
@@ -106,7 +148,7 @@ export const experiences = [
     company: "Amazon Web Services(AWS)",
     date: " Jun 2023 - Jun 2026",
     desc: "I am an AWS Certified Cloud Practitioner, officially recognized by Amazon Web Services (AWS). I obtained this certification in June 2023, and it remains valid until June 2026.",
-    doc: "https://media.licdn.com/dms/image/D5622AQFl9ZGtqdL6Lg/feedshare-shrink_800/0/1687344072049?e=1704931200&v=beta&t=uOx1GnnldmbzCiSVnwx2_s3LCoSH_ILz318lsBM5f3k",
+    doc: "https://www.credly.com/badges/a0fdf9f6-30f0-4d46-93fe-7a1fc5a21698/linked_in_profile",
   },
   {
     id: 14,
@@ -116,7 +158,7 @@ export const experiences = [
     date: "Spetember 2022",
     desc: "I have successfully completed the PCAP-Programming Essentials in Python certification from the OpenEDG Python Institute. This certification was issued in September 2022.",
     skills: ["Python"],
-    doc: "https://media.licdn.com/dms/image/C5622AQE7kHn-Z1IT3A/feedshare-shrink_800/0/1663065513246?e=1704931200&v=beta&t=G9fbJoA9DDqIFj6YMB2gecjNKR6n-wwBau2EyOv5oa4",
+    doc: "https://www.credly.com/badges/4087e64e-b975-43d8-a7d8-5b29d10043d1/linked_in_profile",
   },
   {
     id: 15,
@@ -126,7 +168,7 @@ export const experiences = [
     date: "November 2022",
     desc: "I Got Excellent in the Java programming exam conducted by NPTEL.",
     skills: ["java"],
-    doc: "",
+    doc: programming_in_java,
   },
   {
     id: 16,
@@ -156,7 +198,39 @@ export const experiences = [
 
 export const projects = [
   {
-    id: 9,
+    id: 1,
+    title: "Harvest Link",
+    date: "Jul 2022 - Dec 2022",
+    description:
+      "Despite the benefit made from selling the crop, farmers often sell their crops as quickly as possible after harvest because of particular circumstances and meteorological conditions.Therefore, we create an app that serves as a liaison between godown management and farmers, enabling the farmers to preserve and benefit from the sale of their crops.",
+    image: goku,
+    tags: [
+      "React",
+      "Firebase",
+      "Netlify",
+      "Redux",
+    ],
+    category: "web app",
+    github: "https://github.com/Venky2004/MernFrontend",
+    webapp: "https://harvestlink-btech.netlify.app/",
+    member: [
+      {
+        name: "Venkata Sai Ram Reddy",
+        img: mypic,
+        linkedin: "https://www.linkedin.com/in/venkata-sai-ram-reddy/",
+        github: "https://github.com/Venky2004",
+      },
+      {
+        name: "Jaya Sai Pillagolla",
+        img: jayasai,
+        linkedin:
+          "https://www.linkedin.com/in/durga-jayasai-pillagolla-863828235/",
+        github: "https://github.com/Durgajayasai1/",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Dictionary Using TRIE DataStructure",
     date: "March 2024",
     description:
@@ -175,7 +249,7 @@ export const projects = [
     ],
   },
   {
-    id: 9,
+    id: 3,
     title: "Reservalnnovate",
     date: "Sep 2023 - Dec 2023",
     description:
@@ -183,7 +257,8 @@ export const projects = [
     image: hms,
     tags: ["SpringBoot", "RestAPIS", "MySQL", "MongoDB", "React", "Hibernate"],
     category: "web app",
-    //webapp: "https://baludbr14.pythonanywhere.com/",
+    webapp: "https://hms-bvr.netlify.app/",
+    github:"https://github.com/Venky2004/reservalnnovate",
     member: [
       {
         name: "Reddy Venkata Sai Ram",
@@ -194,7 +269,6 @@ export const projects = [
       {
         name: "Dwarampudi Balaji Reddy",
         img: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/projects/balaji.jpg",
-        // img: "https://media.licdn.com/dms/image/D5635AQFquv3hJ1HEVQ/profile-framedphoto-shrink_100_100/0/1701019548310?e=1702735200&v=beta&t=1FUkOzio2IHDjNAw6kuw-Ouip5wAnlZtR8VYylxprnM",
         linkedin: "https://www.linkedin.com/in/dwarampudi-balaji-reddy/",
         github: "https://github.com/baludbr",
       },
@@ -207,7 +281,7 @@ export const projects = [
     ],
   },
   {
-    id: 9,
+    id: 4,
     title: "Digital Assistant for Legal Awareness",
     date: "Oct 2023",
     description:
@@ -238,41 +312,37 @@ export const projects = [
       {
         name: "Dwarampudi Balaji Reddy",
         img: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/projects/balaji.jpg",
-        // img: "https://media.licdn.com/dms/image/D5635AQFquv3hJ1HEVQ/profile-framedphoto-shrink_100_100/0/1701019548310?e=1702735200&v=beta&t=1FUkOzio2IHDjNAw6kuw-Ouip5wAnlZtR8VYylxprnM",
         linkedin: "https://www.linkedin.com/in/dwarampudi-balaji-reddy/",
         github: "https://github.com/baludbr",
       },
     ],
   },
   {
-    id: 9,
-    title: "PPT Controller",
-    date: "Jun 2023-Aug 2023",
-    description:
-      "You have the ability to manipulate your PowerPoint presentation using hand gestures without any direct physical contact with your desktop. This includes navigating through slides, drawing and erasing on the presentation, and capturing screenshots at your discretion.This work is associated with Kognitiv Club",
-    image:
-      "https://raw.githubusercontent.com/baludbr/My_Achievements/main/projects/PPT%20Controllet.png",
-    tags: ["OpenCV", "Python", "Flask", "PyAutoGUI", "MediaPipe"],
-    category: "opencv",
+    id: 5,
+    title: "URL Analyser",
+    date: "Jan 2024 - Mar 2024",
+    description:"URL Analyser is a web-based application that allows users to analyze URLs. It can be used to check the safety of a URL, analyze the content of a URL, and generate reports based on the URL. This work is associated with Kognitiv Club",
+    image:"",
+    tags: ["MachineLearning", "Python", "Django", "Pickle", "HTML","CSS"],
+    category: "Other",
     //webapp: "https://baludbr14.pythonanywhere.com/",
     member: [
       {
-        name: "Dwarampudi Balaji Reddy",
-        img: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/projects/balaji.jpg",
-        // img: "https://media.licdn.com/dms/image/D5635AQFquv3hJ1HEVQ/profile-framedphoto-shrink_100_100/0/1701019548310?e=1702735200&v=beta&t=1FUkOzio2IHDjNAw6kuw-Ouip5wAnlZtR8VYylxprnM",
-        linkedin: "https://www.linkedin.com/in/dwarampudi-balaji-reddy/",
-        github: "https://github.com/baludbr",
+        name: "Venkata Sai Ram Reddy",
+        img: mypic,
+        linkedin: "https://www.linkedin.com/in/venkata-sai-ram-reddy/",
+        github: "https://github.com/Venky2004",
       },
       {
-        name: "Pavan sekhar Mandavilli",
+        name: "Drashan Jain",
         img: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/projects/pavan.jpg",
         linkedin: "https://www.linkedin.com/in/pavan-sekhar-mandavilli/",
-        //github:"https://github.com/baludbr",
+        github:"https://github.com/baludbr",
       },
     ],
   },
   {
-    id: 9,
+    id: 6,
     title: "Logalyzer",
     date: "Dec 2023",
     description:
@@ -281,6 +351,7 @@ export const projects = [
     tags: ["ReactJS", "Python", "Django", "PHP", "XAMP", "Postman", "sqlite3"],
     category: "Other",
     //webapp: "https://baludbr14.pythonanywhere.com/",
+    github: "https://github.com/Venky2004/logalyzer",
     member: [
       {
         name: "Venkata Sai Ram Reddy",
@@ -320,7 +391,7 @@ export const projects = [
     ],
   },
   {
-    id: 9,
+    id: 7,
     title: "Employee Management System",
     date: "Jun 2023 - Jul 2023",
     description:
@@ -364,7 +435,7 @@ export const projects = [
     ],
   },
   {
-    id: 9,
+    id: 8,
     title: "Horizon Bank",
     date: "Dec 2022 - May 2023",
     description:
@@ -391,9 +462,9 @@ export const projects = [
       },
       {
         name: "Sarvan Surya Namburi",
-        img: "https://raw.githubusercontent.com/baludbr/My_Achievements/main/projects/revanth.jpg",
-        linkedin: "https://www.linkedin.com/in/revanth-chandragiri/",
-        github: "https://github.com/2100031890/",
+        img: sarvan,
+        linkedin: "https://www.linkedin.com/in/sarvansurya/",
+        github: "https://github.com/SarvanSurya",
       },
       {
         name: "BalaKrishna Reddy",
@@ -405,7 +476,7 @@ export const projects = [
   },
   {
     id: 9,
-    title: "Harvest Link",
+    title: "Farm Link",
     date: "Jul 2022 - Dec 2022",
     description:
       "Despite the benefit made from selling the crop, farmers often sell their crops as quickly as possible after harvest because of particular circumstances and meteorological conditions.Therefore, we create an app that serves as a liaison between godown management and farmers, enabling the farmers to preserve and benefit from the sale of their crops.",
@@ -420,8 +491,8 @@ export const projects = [
       "Redux",
     ],
     category: "web app",
-    // github: "",
-    webapp: "https://harvestlink-btech.netlify.app",
+    github: "https://github.com/Venky2004/MernFrontend",
+    webapp: "https://agricultureandaquaculture.netlify.app/",
     member: [
       {
         name: "Venkata Sai Ram Reddy",

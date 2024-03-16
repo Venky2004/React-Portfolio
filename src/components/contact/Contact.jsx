@@ -4,6 +4,7 @@ import './contact.css'
 import {MdOutlineMail} from 'react-icons/md'
 import {RiMessengerLine} from 'react-icons/ri'
 import {BsWhatsapp} from 'react-icons/bs'
+import { toast } from 'react-toastify';
 const Contact = () => {
 
   const form = useRef();
@@ -19,6 +20,14 @@ const Contact = () => {
       });
 
       e.target.reset();
+      toast('Message Sent Successfully🚀', {
+        style: {
+          background: 'transparent',
+          color: 'white',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+        },
+        position: "bottom-right",
+      });
   };
 
   return (
@@ -42,7 +51,7 @@ const Contact = () => {
           <article className="contact_option">
             <BsWhatsapp  className='contact_option-icon'/>
             <h4>Whatsapp</h4>
-            <h5>123456789</h5>
+            <h5>6302115915</h5>
             <a href="https://api.whatsapp.com/send?phone=6302115915" target='_blank'>Send a Message</a>
           </article>
         </div>

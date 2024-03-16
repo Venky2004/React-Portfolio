@@ -96,12 +96,14 @@ const Label = styled.div`
 `;
 
 const Tags = styled.div`
-    width: 50%;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
     margin: 0px 0px;
     @media only screen and (max-width: 600px) {
         margin: 0px 0px;
+        width: 100%;
     }
 `;
 
@@ -110,7 +112,7 @@ const Tag = styled.div`
     font-weight: 400;
     color: ${({ theme }) => theme.primary};
     height:max-content;
-    margin: 4px;
+    margin: 2px;
     padding: 4px 8px;
     background-color: ${({ theme }) => theme.primary + 20};
     @media only screen and (max-width: 600px) {
@@ -119,7 +121,7 @@ const Tag = styled.div`
 `;
 
 const Members = styled.div`
-    width:50%;
+    width:100%;
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -199,6 +201,8 @@ const Button = styled.a`
 
 const ProjectDetail = ({ openModal, setOpenModal }) => {
     const project = openModal?.project;
+    const isMobile = window.innerWidth <= 600;
+    const width = isMobile ? '100%' : '48%';
     return (
         <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })} onClick={() => setOpenModal({ state: false, project: null })}>
             <Container>
@@ -207,10 +211,10 @@ const ProjectDetail = ({ openModal, setOpenModal }) => {
                     <Title>{project?.title}</Title>
                     <Date>{project.date}</Date>
                     <Desc>{project?.description}</Desc>
-                    <div style={{display:"flex",gap:'1rem',flexWrap:'wrap'}}>
+                    <div style={{display:"flex",gap:'1rem',flexWrap:'wrap',flexDirection:'row'}}>
 
                     {project.member && (
-                        <div>
+                        <div style={{ width }}>
                             <Label>Members</Label>
                             <Members>
                                 {project?.member.map((member) => (
@@ -237,7 +241,7 @@ const ProjectDetail = ({ openModal, setOpenModal }) => {
                         </div>
                     
                     )}
-                    <div>
+                     <div style={{ width }}>
                     <Label>Technologies Used</Label>
                     <Tags>
                         {project?.tags.map((tag) => (
